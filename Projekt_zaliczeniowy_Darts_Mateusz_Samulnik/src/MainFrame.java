@@ -10,9 +10,6 @@ public class MainFrame extends JFrame {
         setVisible(true);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
-
-
-
         setJMenuBar(topMenu.menuBar);
         topMenu.menuBar.add(topMenu.newGame);
         topMenu.menuBar.add(topMenu.scoreTable);
@@ -21,10 +18,7 @@ public class MainFrame extends JFrame {
         topMenu.scoreTable.add(topMenu.showScoreTable);
         topMenu.highScore.add(topMenu.showHighScore);
 
-
         add(startPanel, BorderLayout.CENTER);
         pack();
     }
-
-
 }

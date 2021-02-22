@@ -5,7 +5,7 @@ import java.awt.*;
 public class HighScore extends JFrame {
     static JTable highScoreTable;
     static DefaultTableModel highScoreModel;
-    String[] columnNames = {"Pozycja", "Imie gracza", "Tryb gry", "Liczba punktow" ,"Liczba rzutow", "Data"};
+    String[] columnNames = {"Pozycja", "Imie gracza", "Tryb gry", "Liczba punktow", "Liczba rzutow", "Data"};
 
     HighScore() throws Exception {
         ButtonGroup mode = new ButtonGroup();

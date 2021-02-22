@@ -1,4 +1,5 @@
 import com.mysql.jdbc.Connection;
+
 import java.io.FileInputStream;
 import java.sql.*;
 import javax.swing.*;
@@ -36,7 +37,6 @@ public class GameDAO {
     public void getAllData() {
 
         try {
-
             String sql = "select * from scoreboard";
             PreparedStatement ps = myConn.prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
@@ -57,8 +57,7 @@ public class GameDAO {
     public void getHighScore() {
 
         try {
-
-            String sql = "select * from scoreboard where GameMode = " + "'" + gameMode + "'" +" and PointsNum = " + points + " order by NumOfThrows ASC";
+            String sql = "select * from scoreboard where GameMode = " + "'" + gameMode + "'" + " and PointsNum = " + points + " order by NumOfThrows ASC";
             PreparedStatement ps = myConn.prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
@@ -77,8 +76,7 @@ public class GameDAO {
     }
 
     public void insertDataForPlayer1() {
-        try{
-
+        try {
             PreparedStatement ps = myConn.prepareStatement("INSERT INTO scoreboard (PlayerName, GameMode, PointsNum, NumOfThrows, Date) VALUES(?,?,?,?,?)");
             ps.setString(1, Game.player1name);
             ps.setString(2, gameMode);
@@ -90,14 +88,13 @@ public class GameDAO {
             ps.close();
             myConn.close();
 
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
     public void insertDataForPlayer2() {
-        try{
-
+        try {
             PreparedStatement ps = myConn.prepareStatement("INSERT INTO scoreboard (PlayerName, GameMode, PointsNum, NumOfThrows, Date) VALUES(?,?,?,?,?)");
             ps.setString(1, Game.player2name);
             ps.setString(2, gameMode);
@@ -109,7 +106,7 @@ public class GameDAO {
             ps.close();
             myConn.close();
 
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

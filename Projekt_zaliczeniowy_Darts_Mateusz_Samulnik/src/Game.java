@@ -91,12 +91,12 @@ public class Game extends JFrame implements ActionListener {
         setLayout(layout);
         setTitle("GAME");
         setVisible(true);
-        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         setSize(800, 800);
 
         //Tablica wyników
         scoreBoard.add(showPoints);
-                showPoints.setText("<html>Gracz 1: " + player1name + "<br/>Punkty: " + player1Points +
+        showPoints.setText("<html>Gracz 1: " + player1name + "<br/>Punkty: " + player1Points +
                 "<br/><br/>Gracz 2: " + player2name + "<br/>Punkty:" + player2Points + "</html>");
         scoreBoard.setBorder(new TitledBorder("Tablica wyników:"));
         add(scoreBoard);
@@ -112,7 +112,7 @@ public class Game extends JFrame implements ActionListener {
 
         //Przyciski punktów
         add(pointsBoard);
-        pointsBoard.setLayout(new GridLayout(0,3));
+        pointsBoard.setLayout(new GridLayout(0, 3));
         pointsBoard.add(single1);
         pointsBoard.add(double1);
         pointsBoard.add(triple1);
@@ -285,469 +285,469 @@ public class Game extends JFrame implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-                eventsCounter --;
-                if (eventsCounter == -1) {
-                    eventsCounter = 2;
-                }
-                if (e.getSource() == single1) {
-                    subtractPoints = 1;
-                    try {
-                        update();
-                    } catch (Exception exception) {
-                        exception.printStackTrace();
-                    }
-                } else if (e.getSource() == double1) {
-                    subtractPoints = 1 * 2;
-                    try {
-                        update();
-                    } catch (Exception exception) {
-                        exception.printStackTrace();
-                    }
-                } else if (e.getSource() == triple1) {
-                    subtractPoints = 1 * 3;
-                    try {
-                        update();
-                    } catch (Exception exception) {
-                        exception.printStackTrace();
-                    }
-                } else if (e.getSource() == single2) {
-                    subtractPoints = 2;
-                    try {
-                        update();
-                    } catch (Exception exception) {
-                        exception.printStackTrace();
-                    }
-                } else if (e.getSource() == double2) {
-                    subtractPoints = 2 * 2;
-                    try {
-                        update();
-                    } catch (Exception exception) {
-                        exception.printStackTrace();
-                    }
-                } else if (e.getSource() == triple2) {
-                    subtractPoints = 2 * 3;
-                    try {
-                        update();
-                    } catch (Exception exception) {
-                        exception.printStackTrace();
-                    }
-                } else if (e.getSource() == single3) {
-                    subtractPoints = 3;
-                    try {
-                        update();
-                    } catch (Exception exception) {
-                        exception.printStackTrace();
-                    }
-                } else if (e.getSource() == double3) {
-                    subtractPoints = 3 * 2;
-                    try {
-                        update();
-                    } catch (Exception exception) {
-                        exception.printStackTrace();
-                    }
-                } else if (e.getSource() == triple3) {
-                    subtractPoints = 3 * 3;
-                    try {
-                        update();
-                    } catch (Exception exception) {
-                        exception.printStackTrace();
-                    }
-                } else if (e.getSource() == single4) {
-                    subtractPoints = 4;
-                    try {
-                        update();
-                    } catch (Exception exception) {
-                        exception.printStackTrace();
-                    }
-                } else if (e.getSource() == double4) {
-                    subtractPoints = 4 * 2;
-                    try {
-                        update();
-                    } catch (Exception exception) {
-                        exception.printStackTrace();
-                    }
-                } else if (e.getSource() == triple4) {
-                    subtractPoints = 4 * 3;
-                    try {
-                        update();
-                    } catch (Exception exception) {
-                        exception.printStackTrace();
-                    }
-                } else if (e.getSource() == single5) {
-                    subtractPoints = 5;
-                    try {
-                        update();
-                    } catch (Exception exception) {
-                        exception.printStackTrace();
-                    }
-                } else if (e.getSource() == double5) {
-                    subtractPoints = 5 * 2;
-                    try {
-                        update();
-                    } catch (Exception exception) {
-                        exception.printStackTrace();
-                    }
-                } else if (e.getSource() == triple5) {
-                    subtractPoints = 5 * 3;
-                    try {
-                        update();
-                    } catch (Exception exception) {
-                        exception.printStackTrace();
-                    }
-                } else if (e.getSource() == single6) {
-                    subtractPoints = 6;
-                    try {
-                        update();
-                    } catch (Exception exception) {
-                        exception.printStackTrace();
-                    }
-                } else if (e.getSource() == double6) {
-                    subtractPoints = 6 * 2;
-                    try {
-                        update();
-                    } catch (Exception exception) {
-                        exception.printStackTrace();
-                    }
-                } else if (e.getSource() == triple6) {
-                    subtractPoints = 6 * 3;
-                    try {
-                        update();
-                    } catch (Exception exception) {
-                        exception.printStackTrace();
-                    }
-                } else if (e.getSource() == single7) {
-                    subtractPoints = 7;
-                    try {
-                        update();
-                    } catch (Exception exception) {
-                        exception.printStackTrace();
-                    }
-                } else if (e.getSource() == double7) {
-                    subtractPoints = 7 * 2;
-                    try {
-                        update();
-                    } catch (Exception exception) {
-                        exception.printStackTrace();
-                    }
-                } else if (e.getSource() == triple7) {
-                    subtractPoints = 7 * 3;
-                    try {
-                        update();
-                    } catch (Exception exception) {
-                        exception.printStackTrace();
-                    }
-                } else if (e.getSource() == single8) {
-                    subtractPoints = 8;
-                    try {
-                        update();
-                    } catch (Exception exception) {
-                        exception.printStackTrace();
-                    }
-                } else if (e.getSource() == double8) {
-                    subtractPoints = 8 * 2;
-                    try {
-                        update();
-                    } catch (Exception exception) {
-                        exception.printStackTrace();
-                    }
-                } else if (e.getSource() == triple8) {
-                    subtractPoints = 8 * 3;
-                    try {
-                        update();
-                    } catch (Exception exception) {
-                        exception.printStackTrace();
-                    }
-                } else if (e.getSource() == single9) {
-                    subtractPoints = 9;
-                    try {
-                        update();
-                    } catch (Exception exception) {
-                        exception.printStackTrace();
-                    }
-                } else if (e.getSource() == double9) {
-                    subtractPoints = 9 * 2;
-                    try {
-                        update();
-                    } catch (Exception exception) {
-                        exception.printStackTrace();
-                    }
-                } else if (e.getSource() == triple9) {
-                    subtractPoints = 9 * 3;
-                    try {
-                        update();
-                    } catch (Exception exception) {
-                        exception.printStackTrace();
-                    }
-                } else if (e.getSource() == single10) {
-                    subtractPoints = 10;
-                    try {
-                        update();
-                    } catch (Exception exception) {
-                        exception.printStackTrace();
-                    }
-                } else if (e.getSource() == double10) {
-                    subtractPoints = 10 * 2;
-                    try {
-                        update();
-                    } catch (Exception exception) {
-                        exception.printStackTrace();
-                    }
-                } else if (e.getSource() == triple10) {
-                    subtractPoints = 10 * 3;
-                    try {
-                        update();
-                    } catch (Exception exception) {
-                        exception.printStackTrace();
-                    }
-                } else if (e.getSource() == single11) {
-                    subtractPoints = 11;
-                    try {
-                        update();
-                    } catch (Exception exception) {
-                        exception.printStackTrace();
-                    }
-                } else if (e.getSource() == double11) {
-                    subtractPoints = 11 * 2;
-                    try {
-                        update();
-                    } catch (Exception exception) {
-                        exception.printStackTrace();
-                    }
-                } else if (e.getSource() == triple11) {
-                    subtractPoints = 11 * 3;
-                    try {
-                        update();
-                    } catch (Exception exception) {
-                        exception.printStackTrace();
-                    }
-                } else if (e.getSource() == single12) {
-                    subtractPoints = 12;
-                    try {
-                        update();
-                    } catch (Exception exception) {
-                        exception.printStackTrace();
-                    }
-                } else if (e.getSource() == double12) {
-                    subtractPoints = 12 * 2;
-                    try {
-                        update();
-                    } catch (Exception exception) {
-                        exception.printStackTrace();
-                    }
-                } else if (e.getSource() == triple12) {
-                    subtractPoints = 12 * 3;
-                    try {
-                        update();
-                    } catch (Exception exception) {
-                        exception.printStackTrace();
-                    }
-                } else if (e.getSource() == single13) {
-                    subtractPoints = 13;
-                    try {
-                        update();
-                    } catch (Exception exception) {
-                        exception.printStackTrace();
-                    }
-                } else if (e.getSource() == double13) {
-                    subtractPoints = 13 * 2;
-                    try {
-                        update();
-                    } catch (Exception exception) {
-                        exception.printStackTrace();
-                    }
-                } else if (e.getSource() == triple13) {
-                    subtractPoints = 13 * 3;
-                    try {
-                        update();
-                    } catch (Exception exception) {
-                        exception.printStackTrace();
-                    }
-                } else if (e.getSource() == single14) {
-                    subtractPoints = 14;
-                    try {
-                        update();
-                    } catch (Exception exception) {
-                        exception.printStackTrace();
-                    }
-                } else if (e.getSource() == double14) {
-                    subtractPoints = 14 * 2;
-                    try {
-                        update();
-                    } catch (Exception exception) {
-                        exception.printStackTrace();
-                    }
-                } else if (e.getSource() == triple14) {
-                    subtractPoints = 14 * 3;
-                    try {
-                        update();
-                    } catch (Exception exception) {
-                        exception.printStackTrace();
-                    }
-                }else if (e.getSource() == single15) {
-                    subtractPoints = 15;
-                    try {
-                        update();
-                    } catch (Exception exception) {
-                        exception.printStackTrace();
-                    }
-                } else if (e.getSource() == double15) {
-                    subtractPoints = 15 * 2;
-                    try {
-                        update();
-                    } catch (Exception exception) {
-                        exception.printStackTrace();
-                    }
-                } else if (e.getSource() == triple15) {
-                    subtractPoints = 15 * 3;
-                    try {
-                        update();
-                    } catch (Exception exception) {
-                        exception.printStackTrace();
-                    }
-                } else if (e.getSource() == single16) {
-                    subtractPoints = 16;
-                    try {
-                        update();
-                    } catch (Exception exception) {
-                        exception.printStackTrace();
-                    }
-                } else if (e.getSource() == double16) {
-                    subtractPoints = 16 * 2;
-                    try {
-                        update();
-                    } catch (Exception exception) {
-                        exception.printStackTrace();
-                    }
-                } else if (e.getSource() == triple16) {
-                    subtractPoints = 16 * 3;
-                    try {
-                        update();
-                    } catch (Exception exception) {
-                        exception.printStackTrace();
-                    }
-                } else if (e.getSource() == single17) {
-                    subtractPoints = 17;
-                    try {
-                        update();
-                    } catch (Exception exception) {
-                        exception.printStackTrace();
-                    }
-                } else if (e.getSource() == double17) {
-                    subtractPoints = 17 * 2;
-                    try {
-                        update();
-                    } catch (Exception exception) {
-                        exception.printStackTrace();
-                    }
-                } else if (e.getSource() == triple17) {
-                    subtractPoints = 17 * 3;
-                    try {
-                        update();
-                    } catch (Exception exception) {
-                        exception.printStackTrace();
-                    }
-                } else if (e.getSource() == single18) {
-                    subtractPoints = 18;
-                    try {
-                        update();
-                    } catch (Exception exception) {
-                        exception.printStackTrace();
-                    }
-                } else if (e.getSource() == double18) {
-                    subtractPoints = 18 * 2;
-                    try {
-                        update();
-                    } catch (Exception exception) {
-                        exception.printStackTrace();
-                    }
-                } else if (e.getSource() == triple18) {
-                    subtractPoints = 18 * 3;
-                    try {
-                        update();
-                    } catch (Exception exception) {
-                        exception.printStackTrace();
-                    }
-                } else if (e.getSource() == single19) {
-                    subtractPoints = 19;
-                    try {
-                        update();
-                    } catch (Exception exception) {
-                        exception.printStackTrace();
-                    }
-                } else if (e.getSource() == double19) {
-                    subtractPoints = 19 * 2;
-                    try {
-                        update();
-                    } catch (Exception exception) {
-                        exception.printStackTrace();
-                    }
-                } else if (e.getSource() == triple19) {
-                    subtractPoints = 19 * 3;
-                    try {
-                        update();
-                    } catch (Exception exception) {
-                        exception.printStackTrace();
-                    }
-                } else if (e.getSource() == single20) {
-                    subtractPoints = 20;
-                    try {
-                        update();
-                    } catch (Exception exception) {
-                        exception.printStackTrace();
-                    }
-                } else if (e.getSource() == double20) {
-                    subtractPoints = 20 * 2;
-                    try {
-                        update();
-                    } catch (Exception exception) {
-                        exception.printStackTrace();
-                    }
-                } else if (e.getSource() == triple20) {
-                    subtractPoints = 20 * 3;
-                    try {
-                        update();
-                    } catch (Exception exception) {
-                        exception.printStackTrace();
-                    }
-                } else if (e.getSource() == centre25) {
-                    subtractPoints = 25;
-                    try {
-                        update();
-                    } catch (Exception exception) {
-                        exception.printStackTrace();
-                    }
-                } else if (e.getSource() == centre50) {
-                    subtractPoints = 50;
-                    try {
-                        update();
-                    } catch (Exception exception) {
-                        exception.printStackTrace();
-                    }
-                } else if (e.getSource() == missed) {
-                    subtractPoints = 0;
-                    try {
-                        update();
-                    } catch (Exception exception) {
-                        exception.printStackTrace();
-                    }
-                }
-
-                if (isDouble) {
-                    if (player1Points < 51 || player2Points < 51) {
-                        if (e.getSource() == double1 || e.getSource() == double2 || e.getSource() == double3 ||
-                                e.getSource() == double4 || e.getSource() == double5 || e.getSource() == double6 ||
-                                e.getSource() == double7 || e.getSource() == double8 || e.getSource() == double9 ||
-                                e.getSource() == double10 || e.getSource() == double11 || e.getSource() == double12 ||
-                                e.getSource() == double13 || e.getSource() == double14 || e.getSource() == double15 ||
-                                e.getSource() == double16 || e.getSource() == double17 || e.getSource() == double18 ||
-                                e.getSource() == double19 || e.getSource() == double20 || e.getSource() == centre50) {
-                            if (player1Points == subtractPoints || player2Points == subtractPoints) {
-                                finishedByDouble = true;
-                            }
-                        }
-                    }
-                }
+        eventsCounter--;
+        if (eventsCounter == -1) {
+            eventsCounter = 2;
         }
+        if (e.getSource() == single1) {
+            subtractPoints = 1;
+            try {
+                update();
+            } catch (Exception exception) {
+                exception.printStackTrace();
+            }
+        } else if (e.getSource() == double1) {
+            subtractPoints = 1 * 2;
+            try {
+                update();
+            } catch (Exception exception) {
+                exception.printStackTrace();
+            }
+        } else if (e.getSource() == triple1) {
+            subtractPoints = 1 * 3;
+            try {
+                update();
+            } catch (Exception exception) {
+                exception.printStackTrace();
+            }
+        } else if (e.getSource() == single2) {
+            subtractPoints = 2;
+            try {
+                update();
+            } catch (Exception exception) {
+                exception.printStackTrace();
+            }
+        } else if (e.getSource() == double2) {
+            subtractPoints = 2 * 2;
+            try {
+                update();
+            } catch (Exception exception) {
+                exception.printStackTrace();
+            }
+        } else if (e.getSource() == triple2) {
+            subtractPoints = 2 * 3;
+            try {
+                update();
+            } catch (Exception exception) {
+                exception.printStackTrace();
+            }
+        } else if (e.getSource() == single3) {
+            subtractPoints = 3;
+            try {
+                update();
+            } catch (Exception exception) {
+                exception.printStackTrace();
+            }
+        } else if (e.getSource() == double3) {
+            subtractPoints = 3 * 2;
+            try {
+                update();
+            } catch (Exception exception) {
+                exception.printStackTrace();
+            }
+        } else if (e.getSource() == triple3) {
+            subtractPoints = 3 * 3;
+            try {
+                update();
+            } catch (Exception exception) {
+                exception.printStackTrace();
+            }
+        } else if (e.getSource() == single4) {
+            subtractPoints = 4;
+            try {
+                update();
+            } catch (Exception exception) {
+                exception.printStackTrace();
+            }
+        } else if (e.getSource() == double4) {
+            subtractPoints = 4 * 2;
+            try {
+                update();
+            } catch (Exception exception) {
+                exception.printStackTrace();
+            }
+        } else if (e.getSource() == triple4) {
+            subtractPoints = 4 * 3;
+            try {
+                update();
+            } catch (Exception exception) {
+                exception.printStackTrace();
+            }
+        } else if (e.getSource() == single5) {
+            subtractPoints = 5;
+            try {
+                update();
+            } catch (Exception exception) {
+                exception.printStackTrace();
+            }
+        } else if (e.getSource() == double5) {
+            subtractPoints = 5 * 2;
+            try {
+                update();
+            } catch (Exception exception) {
+                exception.printStackTrace();
+            }
+        } else if (e.getSource() == triple5) {
+            subtractPoints = 5 * 3;
+            try {
+                update();
+            } catch (Exception exception) {
+                exception.printStackTrace();
+            }
+        } else if (e.getSource() == single6) {
+            subtractPoints = 6;
+            try {
+                update();
+            } catch (Exception exception) {
+                exception.printStackTrace();
+            }
+        } else if (e.getSource() == double6) {
+            subtractPoints = 6 * 2;
+            try {
+                update();
+            } catch (Exception exception) {
+                exception.printStackTrace();
+            }
+        } else if (e.getSource() == triple6) {
+            subtractPoints = 6 * 3;
+            try {
+                update();
+            } catch (Exception exception) {
+                exception.printStackTrace();
+            }
+        } else if (e.getSource() == single7) {
+            subtractPoints = 7;
+            try {
+                update();
+            } catch (Exception exception) {
+                exception.printStackTrace();
+            }
+        } else if (e.getSource() == double7) {
+            subtractPoints = 7 * 2;
+            try {
+                update();
+            } catch (Exception exception) {
+                exception.printStackTrace();
+            }
+        } else if (e.getSource() == triple7) {
+            subtractPoints = 7 * 3;
+            try {
+                update();
+            } catch (Exception exception) {
+                exception.printStackTrace();
+            }
+        } else if (e.getSource() == single8) {
+            subtractPoints = 8;
+            try {
+                update();
+            } catch (Exception exception) {
+                exception.printStackTrace();
+            }
+        } else if (e.getSource() == double8) {
+            subtractPoints = 8 * 2;
+            try {
+                update();
+            } catch (Exception exception) {
+                exception.printStackTrace();
+            }
+        } else if (e.getSource() == triple8) {
+            subtractPoints = 8 * 3;
+            try {
+                update();
+            } catch (Exception exception) {
+                exception.printStackTrace();
+            }
+        } else if (e.getSource() == single9) {
+            subtractPoints = 9;
+            try {
+                update();
+            } catch (Exception exception) {
+                exception.printStackTrace();
+            }
+        } else if (e.getSource() == double9) {
+            subtractPoints = 9 * 2;
+            try {
+                update();
+            } catch (Exception exception) {
+                exception.printStackTrace();
+            }
+        } else if (e.getSource() == triple9) {
+            subtractPoints = 9 * 3;
+            try {
+                update();
+            } catch (Exception exception) {
+                exception.printStackTrace();
+            }
+        } else if (e.getSource() == single10) {
+            subtractPoints = 10;
+            try {
+                update();
+            } catch (Exception exception) {
+                exception.printStackTrace();
+            }
+        } else if (e.getSource() == double10) {
+            subtractPoints = 10 * 2;
+            try {
+                update();
+            } catch (Exception exception) {
+                exception.printStackTrace();
+            }
+        } else if (e.getSource() == triple10) {
+            subtractPoints = 10 * 3;
+            try {
+                update();
+            } catch (Exception exception) {
+                exception.printStackTrace();
+            }
+        } else if (e.getSource() == single11) {
+            subtractPoints = 11;
+            try {
+                update();
+            } catch (Exception exception) {
+                exception.printStackTrace();
+            }
+        } else if (e.getSource() == double11) {
+            subtractPoints = 11 * 2;
+            try {
+                update();
+            } catch (Exception exception) {
+                exception.printStackTrace();
+            }
+        } else if (e.getSource() == triple11) {
+            subtractPoints = 11 * 3;
+            try {
+                update();
+            } catch (Exception exception) {
+                exception.printStackTrace();
+            }
+        } else if (e.getSource() == single12) {
+            subtractPoints = 12;
+            try {
+                update();
+            } catch (Exception exception) {
+                exception.printStackTrace();
+            }
+        } else if (e.getSource() == double12) {
+            subtractPoints = 12 * 2;
+            try {
+                update();
+            } catch (Exception exception) {
+                exception.printStackTrace();
+            }
+        } else if (e.getSource() == triple12) {
+            subtractPoints = 12 * 3;
+            try {
+                update();
+            } catch (Exception exception) {
+                exception.printStackTrace();
+            }
+        } else if (e.getSource() == single13) {
+            subtractPoints = 13;
+            try {
+                update();
+            } catch (Exception exception) {
+                exception.printStackTrace();
+            }
+        } else if (e.getSource() == double13) {
+            subtractPoints = 13 * 2;
+            try {
+                update();
+            } catch (Exception exception) {
+                exception.printStackTrace();
+            }
+        } else if (e.getSource() == triple13) {
+            subtractPoints = 13 * 3;
+            try {
+                update();
+            } catch (Exception exception) {
+                exception.printStackTrace();
+            }
+        } else if (e.getSource() == single14) {
+            subtractPoints = 14;
+            try {
+                update();
+            } catch (Exception exception) {
+                exception.printStackTrace();
+            }
+        } else if (e.getSource() == double14) {
+            subtractPoints = 14 * 2;
+            try {
+                update();
+            } catch (Exception exception) {
+                exception.printStackTrace();
+            }
+        } else if (e.getSource() == triple14) {
+            subtractPoints = 14 * 3;
+            try {
+                update();
+            } catch (Exception exception) {
+                exception.printStackTrace();
+            }
+        } else if (e.getSource() == single15) {
+            subtractPoints = 15;
+            try {
+                update();
+            } catch (Exception exception) {
+                exception.printStackTrace();
+            }
+        } else if (e.getSource() == double15) {
+            subtractPoints = 15 * 2;
+            try {
+                update();
+            } catch (Exception exception) {
+                exception.printStackTrace();
+            }
+        } else if (e.getSource() == triple15) {
+            subtractPoints = 15 * 3;
+            try {
+                update();
+            } catch (Exception exception) {
+                exception.printStackTrace();
+            }
+        } else if (e.getSource() == single16) {
+            subtractPoints = 16;
+            try {
+                update();
+            } catch (Exception exception) {
+                exception.printStackTrace();
+            }
+        } else if (e.getSource() == double16) {
+            subtractPoints = 16 * 2;
+            try {
+                update();
+            } catch (Exception exception) {
+                exception.printStackTrace();
+            }
+        } else if (e.getSource() == triple16) {
+            subtractPoints = 16 * 3;
+            try {
+                update();
+            } catch (Exception exception) {
+                exception.printStackTrace();
+            }
+        } else if (e.getSource() == single17) {
+            subtractPoints = 17;
+            try {
+                update();
+            } catch (Exception exception) {
+                exception.printStackTrace();
+            }
+        } else if (e.getSource() == double17) {
+            subtractPoints = 17 * 2;
+            try {
+                update();
+            } catch (Exception exception) {
+                exception.printStackTrace();
+            }
+        } else if (e.getSource() == triple17) {
+            subtractPoints = 17 * 3;
+            try {
+                update();
+            } catch (Exception exception) {
+                exception.printStackTrace();
+            }
+        } else if (e.getSource() == single18) {
+            subtractPoints = 18;
+            try {
+                update();
+            } catch (Exception exception) {
+                exception.printStackTrace();
+            }
+        } else if (e.getSource() == double18) {
+            subtractPoints = 18 * 2;
+            try {
+                update();
+            } catch (Exception exception) {
+                exception.printStackTrace();
+            }
+        } else if (e.getSource() == triple18) {
+            subtractPoints = 18 * 3;
+            try {
+                update();
+            } catch (Exception exception) {
+                exception.printStackTrace();
+            }
+        } else if (e.getSource() == single19) {
+            subtractPoints = 19;
+            try {
+                update();
+            } catch (Exception exception) {
+                exception.printStackTrace();
+            }
+        } else if (e.getSource() == double19) {
+            subtractPoints = 19 * 2;
+            try {
+                update();
+            } catch (Exception exception) {
+                exception.printStackTrace();
+            }
+        } else if (e.getSource() == triple19) {
+            subtractPoints = 19 * 3;
+            try {
+                update();
+            } catch (Exception exception) {
+                exception.printStackTrace();
+            }
+        } else if (e.getSource() == single20) {
+            subtractPoints = 20;
+            try {
+                update();
+            } catch (Exception exception) {
+                exception.printStackTrace();
+            }
+        } else if (e.getSource() == double20) {
+            subtractPoints = 20 * 2;
+            try {
+                update();
+            } catch (Exception exception) {
+                exception.printStackTrace();
+            }
+        } else if (e.getSource() == triple20) {
+            subtractPoints = 20 * 3;
+            try {
+                update();
+            } catch (Exception exception) {
+                exception.printStackTrace();
+            }
+        } else if (e.getSource() == centre25) {
+            subtractPoints = 25;
+            try {
+                update();
+            } catch (Exception exception) {
+                exception.printStackTrace();
+            }
+        } else if (e.getSource() == centre50) {
+            subtractPoints = 50;
+            try {
+                update();
+            } catch (Exception exception) {
+                exception.printStackTrace();
+            }
+        } else if (e.getSource() == missed) {
+            subtractPoints = 0;
+            try {
+                update();
+            } catch (Exception exception) {
+                exception.printStackTrace();
+            }
+        }
+
+        if (isDouble) {
+            if (player1Points < 51 || player2Points < 51) {
+                if (e.getSource() == double1 || e.getSource() == double2 || e.getSource() == double3 ||
+                        e.getSource() == double4 || e.getSource() == double5 || e.getSource() == double6 ||
+                        e.getSource() == double7 || e.getSource() == double8 || e.getSource() == double9 ||
+                        e.getSource() == double10 || e.getSource() == double11 || e.getSource() == double12 ||
+                        e.getSource() == double13 || e.getSource() == double14 || e.getSource() == double15 ||
+                        e.getSource() == double16 || e.getSource() == double17 || e.getSource() == double18 ||
+                        e.getSource() == double19 || e.getSource() == double20 || e.getSource() == centre50) {
+                    if (player1Points == subtractPoints || player2Points == subtractPoints) {
+                        finishedByDouble = true;
+                    }
+                }
+            }
+        }
+    }
 
     public void update() throws Exception {
 
@@ -818,8 +818,7 @@ public class Game extends JFrame implements ActionListener {
                     player2Points += subtractPoints;
                     player2throws++;
                 }
-            }
-            else if (((player1Points == 0 || player2Points == 0) || (player1Points == 1 || player2Points == 1))  && !finishedByDouble) {
+            } else if (((player1Points == 0 || player2Points == 0) || (player1Points == 1 || player2Points == 1)) && !finishedByDouble) {
                 if (player1Turn) {
                     player1Points += subtractPoints;
                     player1throws++;
@@ -827,8 +826,7 @@ public class Game extends JFrame implements ActionListener {
                     player2Points += subtractPoints;
                     player2throws++;
                 }
-            }
-            else if ((player1Points == 0 || player2Points == 0) && finishedByDouble) {
+            } else if ((player1Points == 0 || player2Points == 0) && finishedByDouble) {
                 System.out.println("Game finished");
                 EndGame end = new EndGame();
             }
